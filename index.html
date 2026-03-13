@@ -235,10 +235,16 @@
     }
     @media (min-width: 640px) { .logos-row { gap: 48px; } }
     .logos-row img {
-      height: 28px; width: auto; opacity: .35;
+      height: 24px; width: auto; opacity: .35;
       filter: grayscale(1); transition: opacity .2s, filter .2s;
+      object-fit: contain;
     }
     .logos-row img:hover { opacity: .6; filter: grayscale(0); }
+    .logos-row img[alt="Tesla"]  { height: 40px; }
+    .logos-row img[alt="SpaceX"] { height: 22px; }
+    .logos-row img[alt="Google"] { height: 22px; }
+    .logos-row img[alt="Apple"]  { height: 30px; }
+    .logos-row img[alt="Meta"]   { height: 22px; }
 
     /* ───── HOW IT WORKS ───── */
     .how-section { padding: 56px 0; }
