@@ -994,8 +994,24 @@
         <form id="contact-form" action="https://formspree.io/f/xzdjgylv" method="POST" onsubmit="handleSubmit(event)">
           <input type="text" autocomplete="off" tabindex="-1" style="display:none" aria-hidden="true" name="website" />
           <div class="form-field">
+            <label for="fullName">Full name *</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Jane Smith" />
+          </div>
+          <div class="form-field">
             <label for="workEmail">Work email *</label>
             <input type="email" id="workEmail" name="workEmail" required placeholder="you@company.com" />
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-field">
+            <label for="company">Company *</label>
+            <input type="text" id="company" name="company" required placeholder="Your company name" />
+          </div>
+          <div class="form-field">
+            <label for="country">Country *</label>
+            <input type="text" id="country" name="country" required placeholder="e.g. United States" />
           </div>
           <div class="form-field">
             <label for="hiringTimeline">Hiring urgency *</label>
