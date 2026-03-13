@@ -234,12 +234,11 @@
       gap: 32px;
     }
     @media (min-width: 640px) { .logos-row { gap: 48px; } }
-    .logos-row span {
-      font-size: 20px; font-weight: 800; color: var(--slate-300);
-      letter-spacing: -.02em; opacity: .5;
-      transition: opacity .2s;
+    .logos-row img {
+      height: 28px; width: auto; opacity: .35;
+      filter: grayscale(1); transition: opacity .2s, filter .2s;
     }
-    .logos-row span:hover { opacity: .8; }
+    .logos-row img:hover { opacity: .6; filter: grayscale(0); }
 
     /* ───── HOW IT WORKS ───── */
     .how-section { padding: 56px 0; }
@@ -639,11 +638,11 @@
     <div class="logos-bar-inner reveal">
       <p>Our candidates have worked at</p>
       <div class="logos-row">
-        <span>Tesla</span>
-        <span>SpaceX</span>
-        <span>Google</span>
-        <span>Apple</span>
-        <span>Meta</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png" alt="Tesla" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/SpaceX-Logo.svg" alt="SpaceX" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta" />
       </div>
     </div>
   </div>
