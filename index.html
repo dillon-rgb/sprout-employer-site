@@ -532,7 +532,9 @@
     .form-right { padding: 24px; }
     @media (min-width: 640px) { .form-right { padding: 32px; } }
     @media (min-width: 1024px) { .form-right { padding: 48px; } }
-    .form-right form { display: flex; flex-direction: column; gap: 20px; }
+    .form-right form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; gap: 16px; }
+    @media (min-width: 640px) { .form-row { grid-template-columns: 1fr 1fr; } }
     .form-field label {
       display: block; font-size: 14px; font-weight: 600; color: var(--slate-700);
       margin-bottom: 6px;
@@ -993,38 +995,44 @@
       <div class="form-right reveal-right">
         <form id="contact-form" action="https://formspree.io/f/xzdjgylv" method="POST" onsubmit="handleSubmit(event)">
           <input type="text" autocomplete="off" tabindex="-1" style="display:none" aria-hidden="true" name="website" />
-          <div class="form-field">
-            <label for="fullName">Full name *</label>
-            <input type="text" id="fullName" name="fullName" required placeholder="Jane Smith" />
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fullName">Full name *</label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Jane Smith" />
+            </div>
+            <div class="form-field">
+              <label for="workEmail">Work email *</label>
+              <input type="email" id="workEmail" name="workEmail" required placeholder="you@company.com" />
+            </div>
           </div>
-          <div class="form-field">
-            <label for="workEmail">Work email *</label>
-            <input type="email" id="workEmail" name="workEmail" required placeholder="you@company.com" />
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-field">
+              <label for="company">Company *</label>
+              <input type="text" id="company" name="company" required placeholder="Your company name" />
+            </div>
           </div>
-          <div class="form-field">
-            <label for="phone">Phone number *</label>
-            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" />
-          </div>
-          <div class="form-field">
-            <label for="company">Company *</label>
-            <input type="text" id="company" name="company" required placeholder="Your company name" />
-          </div>
-          <div class="form-field">
-            <label for="country">Country *</label>
-            <input type="text" id="country" name="country" required placeholder="e.g. United States" />
-          </div>
-          <div class="form-field">
-            <label for="hiringTimeline">Hiring urgency *</label>
-            <select id="hiringTimeline" name="hiringTimeline" required>
-              <option value="" disabled selected>How soon do you need to hire?</option>
-              <option value="asap">ASAP (0–30 days)</option>
-              <option value="quarter">This quarter</option>
-              <option value="this-year">This year</option>
-            </select>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="country">Country *</label>
+              <input type="text" id="country" name="country" required placeholder="e.g. United States" />
+            </div>
+            <div class="form-field">
+              <label for="hiringTimeline">Hiring urgency *</label>
+              <select id="hiringTimeline" name="hiringTimeline" required>
+                <option value="" disabled selected>How soon do you need to hire?</option>
+                <option value="asap">ASAP (0–30 days)</option>
+                <option value="quarter">This quarter</option>
+                <option value="this-year">This year</option>
+              </select>
+            </div>
           </div>
           <div class="form-field">
             <label for="jobLinks">Links to open roles</label>
-            <textarea id="jobLinks" name="jobLinks" rows="3" placeholder="Paste links to job postings, one per line"></textarea>
+            <textarea id="jobLinks" name="jobLinks" rows="2" placeholder="Paste links to job postings, one per line"></textarea>
           </div>
           <button type="submit" class="form-submit">
             Get in touch
