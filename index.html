@@ -13,6 +13,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17677620616');
+    gtag('config', 'AW-18029993916');
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400&display=swap" rel="stylesheet" />
   <style>
@@ -1112,6 +1113,11 @@
       headers: { 'Accept': 'application/json' }
     }).then(r => {
       if (r.ok) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18029993916/UiO6CLHJvIwcELy_r5VD',
+          'value': 1.0,
+          'currency': 'CAD'
+        });
         form.style.display = 'none';
         success.classList.add('show');
         form.reset();
